@@ -1,42 +1,39 @@
-import React, { useEffect } from 'react';
-import * as THREE from 'three';
+import React from 'react';
+import Particles from './Particles';
 
 const App = () => {
-  useEffect(() => {
-    // Set up the scene
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
-
-    // Add a cube
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
-
-    camera.position.z = 5;
-
-    const animate = () => {
-      requestAnimationFrame(animate);
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
-      renderer.render(scene, camera);
-    };
-
-    animate();
-
-    // Cleanup on component unmount
-    return () => {
-      renderer.dispose();
-      document.body.removeChild(renderer.domElement);
-    };
-  }, []);
-
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello Three.js with Tailwind!</h1>
+    <div className="relative overflow-hidden h-screen w-full">
+      {/* Navigation Menu */}
+      <nav className="absolute top-0 right-0 p-4 z-20">
+        <ul className="flex space-x-4 text-white">
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      {/* Particles Background */}
+      <Particles />
+
+      {/* Landing Page Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-screen text-center p-8">
+        <h1 className="text-5xl font-bold mb-4">Welcome to Our Company</h1>
+        <p className="text-lg mb-6">
+          We are pioneers in innovative solutions, committed to providing the best services and products to our clients. Our team is dedicated to delivering excellence and pushing the boundaries of technology.
+        </p>
+        <div className="flex flex-col items-center">
+          <h2 className="text-3xl font-semibold mb-2">Our Features</h2>
+          <ul className="list-disc list-inside text-left space-y-2 mb-6">
+            <li>Innovative Technology Solutions</li>
+            <li>Customer-Centric Approach</li>
+            <li>Dedicated Support Team</li>
+            <li>State-of-the-Art Infrastructure</li>
+          </ul>
+          <a href="#contact" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg transition duration-300">
+            Get in Touch
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
