@@ -17,7 +17,7 @@ const App = () => {
 
       {/* Landing Page Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-screen text-center p-8">
-        <h1 className="text-5xl font-bold mb-4">Welcome to Our Company</h1>
+        <h1 className="text-5xl font-bold mb-4">Welcome to Sigepo</h1>
         <p className="text-lg mb-6">
           We are pioneers in innovative solutions, committed to providing the best services and products to our clients. Our team is dedicated to delivering excellence and pushing the boundaries of technology.
         </p>
