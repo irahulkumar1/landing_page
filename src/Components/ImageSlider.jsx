@@ -15,7 +15,7 @@ const ImageSlider = () => {
             {
                 ImageData.map((img, index) => (
                     <div className='flex flex-row ' key={index}>
-                        <img className='block rounded-xl' src={img.src} alt="" />
+                        <img className='block rounded-xl' loading="lazy" src={img.src} alt="" />
                     </div>
                 ))}
         </div>

@@ -1,5 +1,6 @@
 # landing_page
-url: https://sigepo.netlify.app/
+
+url: https://websoul.netlify.app/
 **This is a vite app**
 need to run by
 
@@ -7,8 +8,7 @@ need to run by
 npm run dev
 ```
 
-### packages installed:
-
+### packages Used:
 
 * normalise Css
 * tailwind css
