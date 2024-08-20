@@ -15,7 +15,7 @@ const Header = () => {
           className="text-white hover:text-gray-300"
         >
 
-          <img className='h-6 ml-10' src={logo} alt="logo" />
+          <img className='h-6 ml-10' loading="lazy" src={logo} alt="logo" />
         </Link>
 
         <ul className="flex justify-center space-x-8">
