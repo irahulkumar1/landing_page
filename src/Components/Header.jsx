@@ -1,10 +1,14 @@
 import { Link } from 'react-scroll'
+import { useState } from 'react'
 import logo from '../assets/Sigepo.svg'
+import changeTheme from "../assets/themeMode.png"
+
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 p-4 z-20 bg-gray-800  flex justify-between text-black">
-
+      <nav className="fixed top-0 left-0 right-0 p-4 z-20 bg-gray-800 flex justify-between items-center text-black font-inter">
         <Link
           activeClass="active"
           to="home"
@@ -14,12 +18,25 @@ const Header = () => {
           duration={500}
           className="text-white hover:text-gray-300"
         >
-
-          <img className='h-6 ml-10' loading="lazy" src={logo} alt="logo" />
+          <img className='h-6 ml-4 md:ml-10' loading="lazy" src={logo} alt="logo" />
         </Link>
 
-        <ul className="flex justify-center space-x-8">
-          <li>
+        {/* Hamburger Menu for Mobile */}
+        <div className="md:hidden">
+          <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              {isOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+              )}
+            </svg>
+          </button>
+        </div>
+
+        {/* Navigation Links */}
+        <ul className={`flex-col md:flex-row md:flex justify-center space-y-4 md:space-y-0 md:space-x-8 absolute md:static top-16 left-0 w-full md:w-auto bg-gray-800 md:bg-transparent ${isOpen ? 'block' : 'hidden'} md:block`}>
+          <li className="text-center">
             <Link
               activeClass="active"
               to="services"
@@ -28,25 +45,28 @@ const Header = () => {
               offset={-70}
               duration={500}
               className="text-white hover:text-gray-300"
+              onClick={() => setIsOpen(false)}
             >
               Our Services
             </Link>
           </li>
 
-          <li>
+          <li className="text-center">
             <Link
               activeClass="active"
-              to="portfolio"
+              to="ourWork"
               spy={true}
               smooth={true}
               offset={-70}
               duration={500}
               className="text-white hover:text-gray-300"
+              onClick={() => setIsOpen(false)}
             >
               Work
             </Link>
           </li>
-          <li>
+
+          <li className="text-center">
             <Link
               activeClass="active"
               to="testimonials"
@@ -55,11 +75,13 @@ const Header = () => {
               offset={-70}
               duration={500}
               className="text-white hover:text-gray-300"
+              onClick={() => setIsOpen(false)}
             >
               Testimonials
             </Link>
           </li>
-          <li>
+
+          <li className="text-center">
             <Link
               activeClass="active"
               to="about"
@@ -68,11 +90,13 @@ const Header = () => {
               offset={-70}
               duration={500}
               className="text-white hover:text-gray-300"
+              onClick={() => setIsOpen(false)}
             >
               About Us
             </Link>
           </li>
-          <li>
+
+          <li className="text-center">
             <Link
               activeClass="active"
               to="process"
@@ -81,12 +105,21 @@ const Header = () => {
               offset={-70}
               duration={500}
               className="text-white hover:text-gray-300"
+              onClick={() => setIsOpen(false)}
             >
               Process
             </Link>
           </li>
         </ul>
-        <div className=''>
+
+        {/* Contact Button */}
+        <div className='hidden md:block'>
+          <button
+
+            className="mr-4 md:mr-10 primaryButton rounded-full p-2"
+          >
+            <img src={changeTheme} alt='themeChange' />
+          </button>
           <Link
             activeClass="active"
             to="contact"
@@ -94,7 +127,7 @@ const Header = () => {
             smooth={true}
             offset={-70}
             duration={500}
-            className="mr-10 text-white hover:text-gray-300  bg-blue-500 hover:bg-blue-600  font-bold py-2 px-6 rounded-lg transition duration-300 cursor-pointer"
+            className="mr-4 md:mr-10 primaryButton py-2 px-6 rounded-lg"
           >
             Contact Us
           </Link>

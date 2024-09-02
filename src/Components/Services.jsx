@@ -33,16 +33,8 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <div className="min-h-screen p-8 flex flex-col items-center">
-      <h1 className="text-4xl font-bold mb-8 text-center">Our <span className="text-blue-700">Services</span></h1>
-
-      {/* <div className="text-center mb-16 max-w-4xl">
-        <h2 className="text-3xl font-semibold mb-4">Software Development Services We Offer</h2>
-        <p className="text-lg text-gray-700">
-          Our comprehensive range of software development services includes custom solutions tailored to your business needs. From intuitive UI/UX design to robust web development, we cover all aspects to ensure your project’s success. Whether you're looking for scalable SaaS solutions, dynamic frontend development, or cloud services, we have the expertise to deliver high-quality results.
-        </p>
-      </div> */}
-
+    <div className="p-8 flex flex-col items-center">
+      <h1 className="text-4xl font-bold mb-8 text-center">Our <span className="text-textPrimaryBlue">Services</span></h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-7xl">
         {servicesData.map((service, index) => (
           <div
