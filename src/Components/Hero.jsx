@@ -4,7 +4,7 @@ const Hero = () => {
     return (
         <>
             <div className="font-montserrat bg-custom-gradient" >
-                <div className="px-[6rem] pt-14">
+                <div className="px-[2rem] md:px-[6rem] pt-14">
                     <h1 className="text-4xl font-bold space-x-2 my-16">
                         <span className="text-white block">Transforming</span>
                         <span className="text-textPrimaryBlue">Ideas</span>
