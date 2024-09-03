@@ -25,17 +25,17 @@ const Home = () => {
       </Element>
 
       {/* About Section */}
-      <Element Element name="about" className="relative min-h-screen flex items-center justify-center text-center">
+      <Element Element name="about" className="relative flex items-center justify-center text-center">
         <AboutUs />
       </Element>
 
       {/* Process Section */}
-      <Element name="process" className="relative min-h-screen flex items-center justify-center text-center p-8">
+      <Element name="process" className="relative flex items-center justify-center text-center p-8">
         <Process />
       </Element>
 
       {/* Contact Section */}
-      <Element name="contact" className="relative min-h-screen flex items-center justify-center text-center p-8">
+      <Element name="contact" className="relative flex items-center justify-center text-center">
         <Contact />
       </Element>
         {/* Portfolio Section */}
