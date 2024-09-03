@@ -38,7 +38,7 @@ const processData = [
 
 const Process = () => {
   return (
-    <div className="min-h-screen sm:p-8 flex flex-col items-center">
+    <div className="sm:p-8 flex flex-col items-center">
       <h1 className="text-4xl font-bold mb-8 text-center">Our <span className="text-blue-700">Process</span></h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 w-full max-w-7xl justify-center">
         {processData.map((process, index) => (
