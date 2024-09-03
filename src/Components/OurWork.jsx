@@ -30,16 +30,16 @@ const OurWork = () => {
 
         <div className="flex flex-col gap-5">
           {/* Top Right Card */}
-          <div className="bg-gray-800 p-2 rounded-lg shadow-lg text-white flex">
+          <div className="flex-col md:flex md-flex-row bg-gray-800 p-2 rounded-lg shadow-lg text-white">
             <img
               src={work2}// Placeholder image URL
               alt="Innovative Mobile App"
-              className="w-full h-40 object-cover mb-4 rounded-lg"
+              className="w-full md:w-[15rem] h-40 object-cover mb-4 rounded-lg"
             />
             <div className='text-left pl-4'>
               <h2 className="text-xl font-semibold mb-4">INNOVATIVE MOBILE APP</h2>
               <p className="text-gray-400">
-                Lorem ipsum dolor sit amet consectetur. Ullamcorper fermentum dictumst cetur sit amet conse. Ullamcorper fermentum dictumst ctetur.
+                Lorem ipsum dolor sit amet consectetur. Ullamcorper fermentum dictumst volutpat nec. Sit nibh rhoncus tellus faucibus velit sem vitae eleifend 
               </p>
               <a href="#" className="text-blue-500 mt-4 inline-block">
                 Read Case Study →
@@ -48,7 +48,7 @@ const OurWork = () => {
           </div>
 
           {/* Bottom Right Card */}
-          <div className="flex bg-gray-800 p-2 rounded-lg shadow-lg text-white">
+          <div className="flex-col md:flex md-flex-row bg-gray-800 p-2 rounded-lg shadow-lg text-white">
             <img
               src={work3} // Placeholder image URL
               alt="Zoom UI UX Redesign"
