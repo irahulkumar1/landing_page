@@ -29,12 +29,12 @@ const ImageSlider = () => {
                 }
                 slider.scrollTo({
                     left: startPosition,
-                    behavior: 'auto', // Set to 'auto' for continuous smooth movement
+                    behavior: 'auto', 
                 });
             }
         };
 
-        const intervalId = setInterval(slideImages, 30); // Increase the interval for smoother scrolling
+        const intervalId = setInterval(slideImages, 30); 
 
         return () => clearInterval(intervalId);
     }, []);
@@ -45,7 +45,7 @@ const ImageSlider = () => {
                 {ImageData.map((img, index) => (
                     <div key={index} className="flex-shrink-0">
                         <img
-                            className="w-[24rem] h-64 rounded-xl object-cover"
+                            className="w-[22rem]  md:w-[24rem] h-48 md:h-64 rounded-xl object-cover"
                             loading="lazy"
                             src={img.src}
                             alt={`slide ${index}`}
